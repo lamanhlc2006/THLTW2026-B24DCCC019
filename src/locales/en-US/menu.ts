@@ -4,6 +4,8 @@ export default {
   'menu.account.center': 'Cá nhân',
   'menu.Dashboard': 'Trang chủ',
   'menu.News': 'Tin tức',
+  'menu.Bai1': 'Bài 1',
+	'menu.Bai2': 'Bài 2',
 
   'menu.DanhMuc': 'Danh mục',
   'menu.DanhMuc.ChucVu': 'Chức vụ',

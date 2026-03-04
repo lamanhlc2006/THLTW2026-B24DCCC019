@@ -41,12 +41,23 @@
 		name: 'TodoList',
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
+	},	
+	{
+		path: '/bai1',
+		name: 'Bai1',
+		icon: '',
+		component: './Bai1',
 	},
-
+	{
+		path: '/bai2',
+		name: 'Bai2',
+		icon: '',
+		component: './Bai2',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
+	// 	path: '/danh-muc',+
 	// 	icon: 'copy',
 	// 	routes: [
 	// 		{
