@@ -8,7 +8,6 @@ import { PlusOutlined, DeleteOutlined, SearchOutlined } from '@ant-design/icons'
 const { Option } = Select;
 const { TabPane } = Tabs;
 
-// --- 1. ĐỊNH NGHĨA KIỂU DỮ LIỆU (TYPES) ---
 interface KnowledgeBlock {
   id: string;
   name: string;
@@ -28,7 +27,6 @@ interface Question {
   blockId: string;
 }
 
-// --- DỮ LIỆU MẪU (MOCK DATA) ---
 const initialBlocks: KnowledgeBlock[] = [
   { id: 'B1', name: 'Tổng quan' },
   { id: 'B2', name: 'Chuyên sâu' },
@@ -47,17 +45,14 @@ const initialQuestions: Question[] = [
 ];
 
 const App: React.FC = () => {
-  // --- STATE QUẢN LÝ DỮ LIỆU ---
   const [blocks, setBlocks] = useState<KnowledgeBlock[]>(initialBlocks);
   const [subjects, setSubjects] = useState<Subject[]>(initialSubjects);
   const [questions, setQuestions] = useState<Question[]>(initialQuestions);
   
-  // State cho Modal tạo đề thi
   const [isExamModalVisible, setIsExamModalVisible] = useState(false);
   const [examForm] = Form.useForm();
   const [generatedExam, setGeneratedExam] = useState<Question[] | null>(null);
 
-  // --- COMPONENT: 1. KHỐI KIẾN THỨC ---
   const BlockManagement = () => (
     <Card title="Quản lý Khối kiến thức">
       <Table 
@@ -71,7 +66,6 @@ const App: React.FC = () => {
     </Card>
   );
 
-  // --- COMPONENT: 2. MÔN HỌC ---
   const SubjectManagement = () => (
     <Card title="Quản lý Môn học">
       <Table 
@@ -86,7 +80,6 @@ const App: React.FC = () => {
     </Card>
   );
 
-  // --- COMPONENT: 3. QUẢN LÝ CÂU HỎI ---
   const QuestionManagement = () => {
     const [filteredQuestions, setFilteredQuestions] = useState<Question[]>(questions);
 
@@ -142,17 +135,14 @@ const App: React.FC = () => {
     );
   };
 
-  // --- COMPONENT: 4. QUẢN LÝ ĐỀ THI ---
   const ExamManagement = () => {
     
-    // Hàm xử lý logic sinh đề thi dựa trên cấu trúc
     const handleGenerateExam = (values: any) => {
       const subject = values.subjectCode;
       const structure = values.structure || [];
       let newExam: Question[] = [];
       let hasError = false;
 
-      // Kiểm tra từng tiêu chí trong cấu trúc
       structure.forEach((criteria: any) => {
         const availableQuestions = questions.filter(
           q => q.subjectCode === subject && 
@@ -166,7 +156,6 @@ const App: React.FC = () => {
           return;
         }
 
-        // Lấy ngẫu nhiên câu hỏi (Mô phỏng)
         const selected = availableQuestions.sort(() => 0.5 - Math.random()).slice(0, criteria.count);
         newExam = [...newExam, ...selected];
       });
@@ -199,7 +188,7 @@ const App: React.FC = () => {
 
         <Modal 
           title="Tạo cấu trúc đề thi" 
-          visible={isExamModalVisible} /* Antd v4 sử dụng 'visible' thay vì 'open' */
+          visible={isExamModalVisible} 
           onCancel={() => setIsExamModalVisible(false)}
           footer={null}
           width={700}
@@ -211,14 +200,12 @@ const App: React.FC = () => {
               </Select>
             </Form.Item>
 
-            {/* Dynamic Form List cho cấu trúc (Dynamic Fields) */}
             <Form.List name="structure">
               {(fields, { add, remove }) => (
                 <>
                   {fields.map(({ key, name, fieldKey, ...restField }) => (
                     <Row key={key} gutter={10} style={{ marginBottom: 8 }} align="middle">
                       <Col span={8}>
-                        {/* Antd v4 form.list cần truyền thêm fieldKey nếu có */}
                         <Form.Item 
                           {...restField} 
                           name={[name, 'blockId']} 
@@ -284,7 +271,6 @@ const App: React.FC = () => {
     );
   };
 
-  // --- RENDER MAIN LAYOUT TABS (Chuẩn Antd v4) ---
   return (
     <div style={{ padding: 24, background: '#f5f5f5', minHeight: '100vh' }}>
       <h2 style={{ textAlign: 'center', marginBottom: 24 }}>HỆ THỐNG QUẢN LÝ NGÂN HÀNG CÂU HỎI & ĐỀ THI</h2>

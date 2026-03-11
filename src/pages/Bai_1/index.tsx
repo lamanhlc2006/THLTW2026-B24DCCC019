@@ -14,7 +14,6 @@ import {
 const { Title, Text } = Typography;
 const { Content } = Layout;
 
-// --- Định nghĩa Types ---
 type Choice = 'Kéo' | 'Búa' | 'Bao';
 const choiceData: Record<Choice, { icon: string }> = {
   'Kéo': { icon: '' },
@@ -77,7 +76,6 @@ const OanTuTiV4: React.FC = () => {
           </Title>
         </div>
 
-        {/* Thống kê */}
         <Row gutter={[16, 16]} style={{ marginBottom: 24 }}>
           <Col span={8}>
             <Card className="stat-card">
@@ -97,7 +95,6 @@ const OanTuTiV4: React.FC = () => {
         </Row>
 
         <Row gutter={[24, 24]}>
-          {/* Nút bấm chơi */}
           <Col xs={24} md={10}>
             <Card title="Kéo búa bao" className="main-card">
               <Space direction="vertical" style={{ width: '100%' }} size="middle">
@@ -117,7 +114,6 @@ const OanTuTiV4: React.FC = () => {
             </Card>
           </Col>
 
-          {/* Bảng lịch sử */}
           <Col xs={24} md={14}>
             <Card 
               title={<span><HistoryOutlined /> Lịch sử</span>}
