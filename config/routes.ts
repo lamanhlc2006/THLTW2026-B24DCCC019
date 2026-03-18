@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/QuanLi',
+		name: 'QuanLi',
+		icon: '',
+		component: './QuanLi',
+	},
 
 	// DANH MUC HE THONG
 	// {
