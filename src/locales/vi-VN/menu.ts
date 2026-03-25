@@ -6,6 +6,13 @@ export default {
 	'menu.About': `Giới thiệu ${APP_CONFIG_TIEN_TO_TRUONG.toLowerCase()}`,
 	'menu.News': 'Tin tức',
 	'menu.QuanLi': 'Quản Lí',
+
+	'menu.CauHinhBieuMauPhuLucVanBang': 'Cấu hình biểu mẫu',
+	'menu.QuanLySoVanBang': 'Sổ văn bằng',
+	'menu.QuyetDinhTotNghiep': 'Quyết định tốt nghiệp',
+	'menu.ThongTinVanBang': 'Thông tin văn bằng',
+	'menu.TraCuuVanBang': 'Tra cứu văn bằng',
+
 	'menu.DanhMuc': 'Danh mục',
 	'menu.DanhMuc.ChucVu': 'Chức vụ',
 };

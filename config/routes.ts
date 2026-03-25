@@ -48,6 +48,36 @@
 		icon: '',
 		component: './QuanLi',
 	},
+	{
+		path: '/cau-hinh-bieu-mau',
+		name: 'Cấu hình biểu mẫu',
+		icon: '',
+		component: './QuanLi/CauHinhBieuMauPhuLucVanBang',
+	},
+	{
+		path: '/so-van-bang',
+		name: 'Sổ văn bằng',
+		icon: '',
+		component: './QuanLi/QuanLySoVanBang',
+	},
+	{
+		path: '/quyet-dinh-tot-nghiep',
+		name: 'Quyết định tốt nghiệp',
+		icon: '',
+		component: './QuanLi/QuyetDinhTotNghiep',
+	},
+	{
+		path: '/thong-tin-van-bang',
+		name: 'Thông tin văn bằng',
+		icon: '',
+		component: './QuanLi/ThongTinVanBang',
+	},
+	{
+		path: '/tra-cuu-van-bang',
+		name: 'Tra cứu văn bằng',
+		icon: '',
+		component: './QuanLi/TraCuuVanBang',
+	},
 
 	// DANH MUC HE THONG
 	// {
