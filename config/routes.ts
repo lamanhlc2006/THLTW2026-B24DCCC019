@@ -42,7 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
-
+	{
+		path: '/manage-clb',
+		name: 'manage-clb',
+		icon: '',
+		component: './HeThongQuanLi',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
