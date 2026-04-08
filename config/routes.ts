@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/travel-app',
+		name: 'TravelApp',
+		icon: '',
+		component: './LenKeHoachDuLich',
+	},
 
 	// DANH MUC HE THONG
 	// {
