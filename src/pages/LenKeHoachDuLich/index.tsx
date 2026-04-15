@@ -216,7 +216,6 @@ export default function TravelPlannerApp() {
           <Text strong>Hệ thống lập kế hoạch du lịch</Text>
         </Header>
 
-        {/* Phần nội dung có thanh cuộn riêng và Gap 20px */}
         <Content style={{ 
           height: 'calc(100vh - 64px)', 
           overflowY: 'auto', 
