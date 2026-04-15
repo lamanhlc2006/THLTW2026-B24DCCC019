@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/manager-product',
+		name: 'ManagerProduct',
+		icon: '',
+		component: './QuanLyDonHang',
+	},
 
 	// DANH MUC HE THONG
 	// {
