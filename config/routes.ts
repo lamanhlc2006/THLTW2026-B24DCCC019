@@ -42,7 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
-
+	{
+		path: '/blog-ca-nhan',
+		name: 'BlogCaNhan',
+		icon: '',
+		component: './BlogCaNhan',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
