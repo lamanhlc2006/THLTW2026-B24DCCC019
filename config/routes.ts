@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/health-manage',
+		name: 'HealthManage',
+		icon: '',
+		component: './HealthManage',
+	},
 
 	// DANH MUC HE THONG
 	// {

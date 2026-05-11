@@ -4,6 +4,7 @@ export default {
   'menu.account.center': 'Cá nhân',
   'menu.Dashboard': 'Trang chủ',
   'menu.News': 'Tin tức',
+  'menu.HealthManage': 'Health Manage',
 
   'menu.DanhMuc': 'Danh mục',
   'menu.DanhMuc.ChucVu': 'Chức vụ',

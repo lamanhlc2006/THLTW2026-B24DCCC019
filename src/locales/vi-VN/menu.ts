@@ -5,6 +5,7 @@ export default {
 	'menu.Dashboard': 'Trang chủ',
 	'menu.About': `Giới thiệu ${APP_CONFIG_TIEN_TO_TRUONG.toLowerCase()}`,
 	'menu.News': 'Tin tức',
+	'menu.HealthManage': 'Health Manage',
 
 	'menu.DanhMuc': 'Danh mục',
 	'menu.DanhMuc.ChucVu': 'Chức vụ',
